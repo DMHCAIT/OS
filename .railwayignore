@@ -1,0 +1,37 @@
+# Railway Deployment for AI Lead Management System
+
+# What gets deployed to Railway
+include = [
+  "backend/",
+  "frontend/",
+  "requirements.txt",
+  "package.json",
+  "railway.toml",
+  "railway.backend.json", 
+  "railway.frontend.json",
+  "Dockerfile",
+  "docker-compose.yml"
+]
+
+# What to ignore in Railway deployment
+exclude = [
+  ".git",
+  "node_modules/", 
+  "__pycache__/",
+  "*.pyc",
+  ".env",
+  ".vscode/",
+  "*.log",
+  "test_data/",
+  "docs/",
+  "*.md",
+  "voice-recordings/",
+  "uploads/",
+  "logs/"
+]
+
+[build]
+# Railway will auto-detect and build both services
+
+[deploy] 
+# Deployment configuration handled by railway.toml
