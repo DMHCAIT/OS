@@ -1,0 +1,13 @@
+# Nixpacks configuration for Railway deployment
+
+[providers]
+python = "3.11"
+
+[build]
+cmd = "pip install -r requirements.txt"
+
+[start] 
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+
+[variables]
+PYTHONPATH = "/app"
