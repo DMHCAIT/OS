@@ -1,0 +1,9 @@
+{
+  "build": {
+    "buildCommand": "pip install fastapi uvicorn pydantic python-multipart requests aiofiles python-dotenv"
+  },
+  "deploy": {
+    "startCommand": "python railway_main.py",
+    "healthcheckPath": "/health"
+  }
+}
